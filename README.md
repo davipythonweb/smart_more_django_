@@ -20,7 +20,7 @@
 ## comandos django
 
 - criado projeto
-  python django-admin startproject core .
+  django-admin startproject core .
 - rodar projeto
   python manage.py runserver
 - criando app
@@ -43,7 +43,7 @@
 #### ACESSO-SGBD
 
 - USER  CONFIG => `root`
-- EMAIL CONFIG => `root@teste.com`
+- EMAIL CONFIG => `root@master.com`
 - PASS CONFIG => `Root$acesso5`
 
 - NOVO USUARIO PARA TESTE: `teste_user`
