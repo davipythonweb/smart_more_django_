@@ -42,12 +42,9 @@
 
 #### ACESSO-SGBD
 
-- USER  CONFIG => root
-- EMAIL CONFIG =>root@teste.com
-- PASS CONFIG => Root$acesso5
+- USER  CONFIG => `root`
+- EMAIL CONFIG => `root@teste.com`
+- PASS CONFIG => `Root$acesso5`
 
-- NOVO USUARIO PARA TESTE: teste_user
-- PASS USUARIO TESTE: Teste@123
-
-- NOVO USUARIO PARA TESTAR: user_teste2
-- PASS : Teste2*300
+- NOVO USUARIO PARA TESTE: `teste_user`
+- PASS USUARIO TESTE: `Teste@123`
