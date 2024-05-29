@@ -1,0 +1,2 @@
+# smart_more_django_
+ecommerce_de_smartphones_apple
