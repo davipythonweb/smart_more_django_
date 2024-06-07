@@ -1,6 +1,7 @@
 # smart_more_django_
 
 `ecommerce_de_smartphones_apple`
+-django4.2 + Bootstrap5 + sqlite3
 
 - migrando para banco PostgreSQL
 `comandos`
