@@ -1,3 +1,13 @@
 from django.contrib import admin
+from phones.models import Phone, Model
 
-# Register your models here.
+class ModelAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+    
+class PhoneAdmin(admin.ModelAdmin):
+    list_display = ('release_year', 'model', 'title', 'value')
+    search_fields = ('release_year', 'model')
+    
+admin.site.register(Model, ModelAdmin)
+admin.site.register(Phone, PhoneAdmin)

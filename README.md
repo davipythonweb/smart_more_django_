@@ -48,3 +48,15 @@
 
 - NOVO USUARIO PARA TESTE: `teste_user`
 - PASS USUARIO TESTE: `Teste@123`
+
+##### pytest
+
+`pip install pytest pytest-django`
+
+##### usage
+
+-runing pytest- rodar no terminal => pytest
+
+- para ver tudo => pytest -rP
+
+- runing unitest- para o test_django => python manage.py test
