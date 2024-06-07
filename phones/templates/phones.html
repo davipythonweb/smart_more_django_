@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block 'title' %}
-  Magazine-Cars
+  Smart-More|Iphones
 {% endblock %}
 
 {% block 'head' %}
@@ -11,15 +11,15 @@
   <!-- bootstrap-icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- CSS of project  -->
-  <link href="{% static 'geral/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'static/css/base.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block 'content' %}
 
   <div id="form-search">
-    <form class="row " action="{% url 'cars_list' %}" method="GET">
+    <form class="row " action="{% url 'phones_list' %}" method="GET">
       <div class="col-4 ">
-        <input class="form-control" type="text" name="search" placeholder="Search car...">
+        <input class="form-control" type="text" name="search" placeholder="Search iphone...">
       </div>
       <div class="col">
         <button class="btn btn-primary" type="submit">Search</button>
@@ -29,27 +29,27 @@
 
   <div class="content">
 
-  <h3>All Cars</h3>
-  {% if cars %}
-  {% for car in cars %}
+  <h3>All Iphones</h3>
+  {% if phones %}
+  {% for phone in phones %}
   <div class="card">
-    <a href="{% url 'car_detail' car.pk %}">
-      {% if car.photo %}
-        <img src="{{car.photo.url }}" class="card-img-top" alt="{{ car.model }} - {{ car.brand }}">
+    <a href="{% url 'phone_detail' phone.pk %}">
+      {% if phone.photo %}
+        <img src="{{phone.photo.url }}" class="card-img-top" alt="{{ phone.model }} - {{ phone.screen }}">
       {% else %}
         <p class="no-photo">Foto nao disponivel!</p>
       {% endif %}
       </a>
     <div class="card-body">
       <i class="bi bi-car-front"></i> 
-      <h2>{{car.brand}}</h2><h2>{{car.model}}</h2>
-      <p>{{car.factory_year}} - R$ {{ car.value }}</p>
+      <h2>{{phone.model}}</h2><h2>{{phone.screen}}</h2>
+      <p>{{phone.release_year}} - R$ {{ phone.value }}</p>
       <a href="#"><p class="card-text">Fale Conosco Já!</p></a>
     </div>
   </div>
   {% endfor %}
   {% else %}
-  <p class="no-results">Nenhum carro encontrado.</p>
+  <p class="no-results">Nenhum iphone encontrado.</p>
   {% endif %}
 
   </div>

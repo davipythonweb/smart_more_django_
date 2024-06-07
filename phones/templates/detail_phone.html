@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block 'title' %}
-  Detail-Car
+  Detail-Phone
 {% endblock %}
 
 {% block 'head' %}
@@ -11,29 +11,28 @@
   <!-- bootstrap-icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- CSS of project  -->
-  <link href="{% static 'geral/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'static/css/base.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block 'content' %}
 
   <div class="car-card" >
-    {% if car.photo %}
-      <img  src="{{object.photo.url }}" alt="{{ object.model }} - {{ object.brand }}">
+    {% if phone.photo %}
+      <img  src="{{object.photo.url }}" alt="{{ object.model }} - {{ object.screen }}">
     {% else %}
       <p class="no-photo">Foto não disponivel!</p>
     {% endif %}  
-      <h2>{{object.brand}} {{object.model}}</h2>
-    <p><strong>Ano de fabricação:</strong> {{object.factory_year}}</p>
-    <p><strong>Ano de Modelo:</strong> {{object.model_year}}</p>
-    <p><strong>Placa:</strong> {{object.plate}}</p>
+      <h2>{{object.model}} {{object.screen}}</h2>
+    <p><strong>Ano de lançamento:</strong> {{object.release_year}}</p>
+    <p><strong>Conteudo da Caixa:</strong> {{object.box_contents}}</p>
     <p> <strong>Preço:</strong> R$ {{ object.value }}</p>
     {% if object.bio %}
       <p> <strong>Bio:</strong> {{ object.bio }}</p>
     {% endif %}
     {% if user.is_authenticated %}
     <div class="buttons-container">
-      <a href="{% url 'car_update' pk=object.pk %}" class="btn btn-primary">Edit Car</a>
-      <a href="{% url 'car_delete' pk=object.pk %}" class="btn btn-danger">Delete Car</a>
+      <a href="{% url 'phone_update' pk=object.pk %}" class="btn btn-primary">Edit Iphone</a>
+      <a href="{% url 'phone_delete' pk=object.pk %}" class="btn btn-danger">Delete Iphone</a>
     </div>
     {% endif %}
   </div> 

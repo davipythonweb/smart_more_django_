@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block 'title' %}
-  Detail-Car
+  Detail-Phone
 {% endblock %}
 
 {% block 'head' %}
@@ -11,22 +11,22 @@
   <!-- bootstrap-icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- CSS of project  -->
-  <link href="{% static 'geral/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'static/css/base.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block 'content' %}
 
   <div class="card-delete" style="margin: 50px 25%;" >
     <div class="card-header">
-        <h2>Delete Car</h2>
+        <h2>Delete Iphone</h2>
     </div>
     <div class="card-body">
-        <p>Tem Certeza que deseja deletar o carro <strong>{{object.brand}} {{object.model}} </strong>?</p>
+        <p>Tem Certeza que deseja deletar o iphone <strong>{{object.model}} {{object.screen}} </strong>?</p>
         <form action="" method="post">
             {% csrf_token %}
             <div class="buttons-container">
-                <button class="btn btn-danger" type="submit">Delete Car</button>
-                <a href="{% url 'car_update' pk=object.pk %}" class="btn btn-primary">Cancel</a>
+                <button class="btn btn-danger" type="submit">Delete Iphone</button>
+                <a href="{% url 'phone_update' pk=object.pk %}" class="btn btn-primary">Cancel</a>
             </div>
         </form>
     </div>
