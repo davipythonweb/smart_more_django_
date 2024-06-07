@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- CSS of project  -->
-  <link href="{% static 'static/css/base.css' %}" rel="stylesheet">
+  <link href="{% static 'geral/css/base.css' %}" rel="stylesheet">
   {% block 'head' %}{% endblock %}
 
 </head>
@@ -21,13 +21,13 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <h3>Smart-More|Iphones</h3>
+        <h3>Smart-More iPhones</h3>
 
         {% if user.is_authenticated %}
-          <ol style="font-size: 1.5rem;color: whitesmoke;padding-right: 20px  ;font-family:Verdana, Geneva, Tahoma, sans-serif;">Olá! <i class="bi bi-person"></i>: <i>{{ user.username }}</i></ol>
+          <ol style="font-size: 1.5rem;color: #333;padding-right: 20px  ;font-family:Verdana, Geneva, Tahoma, sans-serif;">Olá! <i class="bi bi-person"></i>: <i>{{ user.username }}</i></ol>
         
           <div class="col ">
-            <a  class="btn btn-outline-primary" href="{% url 'new_car' %}">Register Cars</a>
+            <a  class="btn btn-outline-primary" href="{% url 'new_phone' %}">Register Phones</a>
           </div>
         {% endif %}
 
@@ -41,7 +41,7 @@
         {% endif %}
 
         <div class="col ">
-          <a  class="btn btn-outline-primary" href="{% url 'cars_list' %}">cars</a>
+          <a  class="btn btn-outline-primary" href="{% url 'phones_list' %}">phones</a>
         </div>
 
         {% if user.is_authenticated %}
@@ -59,7 +59,7 @@
   </main>
 
   <footer>
-    <p>&copy;2024 Smart-More|Iphones</p>
+    <p>&copy;2024 Smart-More | iPhones</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

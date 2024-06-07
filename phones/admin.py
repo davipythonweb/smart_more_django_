@@ -7,7 +7,7 @@ class ModelAdmin(admin.ModelAdmin):
     
 class PhoneAdmin(admin.ModelAdmin):
     list_display = ('release_year', 'model', 'title', 'value')
-    search_fields = ('release_year', 'model')
+    search_fields = ('model', 'release_year')
     
 admin.site.register(Model, ModelAdmin)
 admin.site.register(Phone, PhoneAdmin)

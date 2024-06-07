@@ -12,10 +12,10 @@ class PhonesListView(ListView):
     context_object_name = 'phones'
     
     def get_queryset(self):
-        phones = super().get_queryset().order_by('model')
+        phones = super().get_queryset().order_by('title')
         search = self.request.GET.get('search')
         if search:
-            phones = phones.filter(model__icontains=search)
+            phones = phones.filter(title__icontains=search)
         return phones
     
 class PhoneDetailView(DetailView):
