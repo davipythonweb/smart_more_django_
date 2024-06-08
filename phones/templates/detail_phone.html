@@ -31,8 +31,8 @@
     {% endif %}
     {% if user.is_authenticated %}
     <div class="buttons-container">
-      <a href="{% url 'phone_update' pk=object.pk %}" class="btn btn-primary">Edit Iphone</a>
-      <a href="{% url 'phone_delete' pk=object.pk %}" class="btn btn-danger">Delete Iphone</a>
+      <a href="{% url 'namespace:update' pk=object.pk %}" class="btn btn-primary">Edit Iphone</a>
+      <a href="{% url 'namespace:delete' pk=object.pk %}" class="btn btn-danger">Delete Iphone</a>
     </div>
     {% endif %}
   </div> 

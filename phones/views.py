@@ -24,14 +24,14 @@ class PhoneDetailView(DetailView):
     model = Phone
     template_name = 'detail_phone.html'
     
-@method_decorator(login_required(login_url='namespace_2:login'), name='dispatch')    
+@method_decorator(login_required(login_url='testando:login'), name='dispatch')    
 class NewPhoneCreateView(CreateView):
     model = Phone
     form_class = PhoneModelForm
     template_name = 'new_phone.html'
     success_url = '/'
     
-@method_decorator(login_required(login_url='namespace_2:login'), name='dispatch')        
+@method_decorator(login_required(login_url='testando:login'), name='dispatch')        
 class PhoneUpdateView(UpdateView):
     model = Phone
     form_class = PhoneModelForm
@@ -41,7 +41,7 @@ class PhoneUpdateView(UpdateView):
         return reverse_lazy('phone_detail', kwargs={'pk': self.object.pk})
     
 
-@method_decorator(login_required(login_url='namespace_2:login'), name='dispatch')    
+@method_decorator(login_required(login_url='testando:login'), name='dispatch')    
 class PhoneDeleteView(DeleteView):
     model = Phone
     template_name = 'delete_phone.html'

@@ -26,7 +26,7 @@
             {% csrf_token %}
             <div class="buttons-container">
                 <button class="btn btn-danger" type="submit">Delete Iphone</button>
-                <a href="{% url 'phone_update' pk=object.pk %}" class="btn btn-primary">Cancel</a>
+                <a href="{% url 'namespace:update' pk=object.pk %}" class="btn btn-primary">Cancel</a>
             </div>
         </form>
     </div>

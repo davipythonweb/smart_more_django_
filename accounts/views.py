@@ -8,7 +8,7 @@ def register_view(request):
         user_form = UserCreationForm(request.POST) # carrega o formulario com os dados
         if user_form.is_valid(): # verifica se o formulario eh valido
             user_form.save() # salva
-            return redirect('namespace_2:login') # redireciona para login
+            return redirect('testando:login') # redireciona para login
     else:
         user_form = UserCreationForm() # formulario pronto do django
     return render(request, 'register.html', {'user_form': user_form})
