@@ -6,7 +6,6 @@ from accounts.views import register_view, login_view, logout_view
 from phones.views import PhonesListView, NewPhoneCreateView, PhoneDetailView, PhoneUpdateView, PhoneDeleteView
 
 
-
 urlpatterns = [
     path('', PhonesListView.as_view(), name='phones_list'),
     path('admin/', admin.site.urls),

@@ -53,6 +53,7 @@
 ##### pytest
 
 `pip install pytest pytest-django`
+`pip install pytest-watch`
 
 ##### usage
 
@@ -61,3 +62,4 @@
 - para ver tudo => pytest -rP
 
 - runing unitest- para o test_django => python manage.py test
+- com pytest-watch => ptw
