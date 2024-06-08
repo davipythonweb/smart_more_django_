@@ -4,9 +4,9 @@ from django.conf.urls.static import static
 
 from . import views
 
-# app_name = "namespace"
+app_name ='namespace_2'
 
-urlpatters = [
+urlpatterns = [
     path('register/', views.register_view, name='register'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),

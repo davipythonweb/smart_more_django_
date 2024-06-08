@@ -8,5 +8,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('phones.urls')),
-    path('register/', include('accounts.urls')),
+    path('phones/', include('phones.urls')),
+    path('accounts/', include('accounts.urls')),
+    
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) # para configurar uso de armazenar

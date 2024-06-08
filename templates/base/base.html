@@ -27,26 +27,26 @@
           <ol style="font-size: 1.5rem;color: #333;padding-right: 20px  ;font-family:Verdana, Geneva, Tahoma, sans-serif;">Olá! <i class="bi bi-person"></i>: <i>{{ user.username }}</i></ol>
         
           <div class="col ">
-            <a  class="btn btn-outline-primary" href="{% url 'new_phone' %}">Register Phones</a>
+            <a  class="btn btn-outline-primary" href="{% url 'namespace:new' %}">Register Phones</a>
           </div>
         {% endif %}
 
         {% if not user.is_authenticated %}
           <div class="col ">
-            <a  class="btn btn-outline-primary" href="{% url 'register' %}">Register Users</a>
+            <a  class="btn btn-outline-primary" href="{% url 'namespace_2:register' %}">Register Users</a>
           </div>
           <div class="col ">
-            <a  class="btn btn-outline-primary" href="{% url 'login' %}">Login Users</a>
+            <a  class="btn btn-outline-primary" href="{% url 'namespace_2:login' %}">Login Users</a>
           </div>
         {% endif %}
 
         <div class="col ">
-          <a  class="btn btn-outline-primary" href="{% url 'phones_list' %}">phones</a>
+          <a  class="btn btn-outline-primary" href="{% url 'namespace:list' %}">phones</a>
         </div>
 
         {% if user.is_authenticated %}
           <div class="col ">
-            <a  class="btn btn-outline-warning" href="{% url 'logout' %}">logout</a>
+            <a  class="btn btn-outline-warning" href="{% url 'namespace_2:logout' %}">logout</a>
           </div>
         {% endif %}
   

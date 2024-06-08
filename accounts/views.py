@@ -8,7 +8,7 @@ def register_view(request):
         user_form = UserCreationForm(request.POST) # carrega o formulario com os dados
         if user_form.is_valid(): # verifica se o formulario eh valido
             user_form.save() # salva
-            return redirect('login') # redireciona para login
+            return redirect('namespace_2:login') # redireciona para login
     else:
         user_form = UserCreationForm() # formulario pronto do django
     return render(request, 'register.html', {'user_form': user_form})
@@ -21,7 +21,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password) # verifica se 
         if user is not None:
             login(request, user)
-            return redirect('phones_list') # redireciona para a lista de carros 
+            return redirect('namespace:list') # redireciona para a lista de carros 
         else:
             login_form = AuthenticationForm()
     else:
@@ -30,4 +30,4 @@ def login_view(request):
 
 def logout_view(request): # fazer logout de sessao
     logout(request)
-    return redirect('phones_list')
+    return redirect('namespace:list')
