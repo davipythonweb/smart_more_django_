@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-app_name = 'phones'
+app_name = "iPhones"
 
 urlpatters = [
     path('', views.PhonesListView, name='list'),
